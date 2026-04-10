@@ -93,14 +93,4 @@ router.get('/listSchools', async (req, res) => {
   }
 });
 
-// TEMP: delete all schools
-router.get('/clearSchools', async (req, res) => {
-  try {
-    await pool.query('TRUNCATE TABLE schools');
-    res.json({ message: 'All schools deleted.' });
-  } catch (err) {
-    res.status(500).json({ error: 'Internal server error.' });
-  }
-});
-
 module.exports = router;
