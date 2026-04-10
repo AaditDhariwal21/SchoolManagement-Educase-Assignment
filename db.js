@@ -1,5 +1,4 @@
 const mysql = require('mysql2/promise');
-require('dotenv').config();
 
 // Log available MySQL env vars for debugging
 console.log('DB ENV CHECK:', {
